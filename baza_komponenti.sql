@@ -121,6 +121,28 @@ LOCK TABLES `lokacije` WRITE;
 INSERT INTO `lokacije` VALUES (1,'Nema'),(2,'A1'),(3,'A2'),(4,'A3'),(5,'A4'),(6,'A5'),(7,'B1'),(8,'B2'),(9,'B3'),(10,'B4'),(11,'B5'),(12,'C1'),(13,'C2'),(14,'C3'),(15,'C4'),(16,'C5'),(17,'D1'),(18,'D2'),(19,'D3'),(20,'D4'),(21,'D5'),(22,'E1'),(23,'E2'),(24,'E3'),(25,'E4'),(26,'E5'),(27,'F1'),(28,'F2'),(29,'F3'),(30,'F4'),(31,'F5');
 /*!40000 ALTER TABLE `lokacije` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'baza_komponenti'
+--
+/*!50003 DROP PROCEDURE IF EXISTS `update_kol` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `update_kol`(in id_komp int, in kol_komp int, in lok_id int)
+begin
+update komp_lok_kol set kolicina=kol_komp, lok_id=lok_id where id=id_komp; delete from komp_lok_kol where kolicina=0; end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -131,4 +153,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-31 23:13:57
+-- Dump completed on 2019-05-31 23:20:27
