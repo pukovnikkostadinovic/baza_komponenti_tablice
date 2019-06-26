@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.26, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.25, for Linux (x86_64)
 --
 -- Host: localhost    Database: baza_komponenti
 -- ------------------------------------------------------
--- Server version	5.7.26-0ubuntu0.18.04.1
+-- Server version	5.7.25-0ubuntu0.18.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -36,7 +36,7 @@ CREATE TABLE `kategorije_komponenti` (
 
 LOCK TABLES `kategorije_komponenti` WRITE;
 /*!40000 ALTER TABLE `kategorije_komponenti` DISABLE KEYS */;
-INSERT INTO `kategorije_komponenti` VALUES (1,'Nema kategoriju',' '),(2,'Izvori/regulatori napajanja','Baterije, akumulatori, AC-DC step-up i step-down konverteri i svakojaka napajanja'),(3,'Kabeli','Svakojaki kablovi'),(4,'Konektori','Konektorti muški, ženski, za 220V ili 12V'),(5,'Mikrokontroleri','Arduino Uno, pro mini, nodemcu'),(6,'Otpornici','Svakakve verzije otpornika'),(7,'Kondenzatori','Bipolarni i svakakvi kondenzatori'),(8,'Senzori','ćelije za mjerenje, vlage, težine, voltaže i svega drugog'),(10,'Inox komponente','Inox djelovi za HERMS sustav'),(11,'Dom i vrt','Svašta nešto'),(12,'Ekrani','LCD ili Led paneli ili nešto drugo'),(13,'Releji i tranzistori','Sve što ima funkciju neke sklopke/prekidača ili elektroventila.'),(14,'Pumpe','Svakakve, zračne, vodene ili neke druge'),(15,'DC AC Step Motori','AC, DC, Servo, driveri i dr.'),(16,'Diode','LED, zener i dr.'),(17,'Prijamnici/predajnici','Bluetooth, RF, Wireless i dr'),(18,'Hladnjiaci','Različiti aluminijski, bakreni i drugi elementi za hlađenje'),(19,'Tiskane pločice','Jednoslojne, dvoslojne, foto i druge'),(20,'Čitači/Pisači','Razni moduli za čitanje i pisanje kao sd čitač, rfid pisač'),(21,'Potenciometri i joystici','Razni uređaji za kontrolu servo motora i ostalih komponenti'),(22,'Oscilatori','quartzni oscilatori'),(23,'Pojačala','Svakojaka pojačala');
+INSERT INTO `kategorije_komponenti` VALUES (1,'Nema kategoriju','Komponente za koje još nisam odlučio šta ću.'),(2,'Izvori/regulatori napajanja','Baterije, akumulatori, AC-DC step-up i step-down konverteri i svakojaka napajanja'),(3,'Kabeli','Svakojaki kablovi'),(4,'Konektori','Konektorti muški, ženski, za 220V ili 12V'),(5,'Mikrokontroleri','Arduino Uno, pro mini, nodemcu'),(6,'Otpornici','Svakakve verzije otpornika'),(7,'Kondenzatori','Bipolarni i svakakvi kondenzatori'),(8,'Senzori','ćelije za mjerenje, vlage, težine, voltaže i svega drugog'),(10,'Inox komponente','Inox djelovi za HERMS sustav'),(11,'Dom i vrt','Svašta nešto'),(12,'Ekrani','LCD ili Led paneli ili nešto drugo'),(13,'Releji i tranzistori','Sve što ima funkciju neke sklopke/prekidača ili elektroventila.'),(14,'Pumpe','Svakakve, zračne, vodene ili neke druge'),(15,'DC AC Step Motori','AC, DC, Servo, driveri i dr.'),(16,'Diode','LED, zener i dr.'),(17,'Prijamnici/predajnici','Bluetooth, RF, Wireless i dr'),(18,'Hladnjiaci','Različiti aluminijski, bakreni i drugi elementi za hlađenje'),(19,'Tiskane pločice','Jednoslojne, dvoslojne, foto i druge'),(20,'Čitači/Pisači','Razni moduli za čitanje i pisanje kao sd čitač, rfid pisač'),(21,'Potenciometri i joystici','Razni uređaji za kontrolu servo motora i ostalih komponenti'),(22,'Oscilatori','quartzni oscilatori'),(23,'Pojačala','Svakojaka pojačala');
 /*!40000 ALTER TABLE `kategorije_komponenti` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +86,7 @@ CREATE TABLE `komponente` (
   PRIMARY KEY (`id`),
   KEY `kateg_id_foreign` (`kateg_id`),
   CONSTRAINT `komponente_ibfk_1` FOREIGN KEY (`kateg_id`) REFERENCES `kategorije_komponenti` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=cp1250 COLLATE=cp1250_croatian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=126 DEFAULT CHARSET=cp1250 COLLATE=cp1250_croatian_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,6 +124,32 @@ INSERT INTO `lokacije` VALUES (1,'Nema'),(2,'A1'),(3,'A2'),(4,'A3'),(5,'A4'),(6,
 UNLOCK TABLES;
 
 --
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(8) NOT NULL AUTO_INCREMENT,
+  `name` varchar(400) COLLATE cp1250_croatian_ci NOT NULL,
+  `email` varchar(400) COLLATE cp1250_croatian_ci NOT NULL,
+  `password` varchar(400) COLLATE cp1250_croatian_ci NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=cp1250 COLLATE=cp1250_croatian_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping routines for database 'baza_komponenti'
 --
 /*!50003 DROP PROCEDURE IF EXISTS `update_kol` */;
@@ -154,4 +180,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-24 19:08:01
+-- Dump completed on 2019-06-26 23:37:37
