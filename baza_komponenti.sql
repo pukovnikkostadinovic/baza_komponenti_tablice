@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.25, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.26, for Linux (x86_64)
 --
 -- Host: localhost    Database: baza_komponenti
 -- ------------------------------------------------------
--- Server version	5.7.25-0ubuntu0.18.04.2
+-- Server version	5.7.26-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -36,7 +36,7 @@ CREATE TABLE `kategorije_komponenti` (
 
 LOCK TABLES `kategorije_komponenti` WRITE;
 /*!40000 ALTER TABLE `kategorije_komponenti` DISABLE KEYS */;
-INSERT INTO `kategorije_komponenti` VALUES (1,'Nema kategoriju','Komponente za koje još nisam odlučio šta ću.'),(2,'Izvori/regulatori napajanja','Baterije, akumulatori, AC-DC step-up i step-down konverteri i svakojaka napajanja'),(3,'Kabeli','Svakojaki kablovi'),(4,'Konektori','Konektorti muški, ženski, za 220V ili 12V'),(5,'Mikrokontroleri','Arduino Uno, pro mini, nodemcu'),(6,'Otpornici','Svakakve verzije otpornika'),(7,'Kondenzatori','Bipolarni i svakakvi kondenzatori'),(8,'Senzori','ćelije za mjerenje, vlage, težine, voltaže i svega drugog'),(10,'Inox komponente','Inox djelovi za HERMS sustav'),(11,'Dom i vrt','Svašta nešto'),(12,'Ekrani','LCD ili Led paneli ili nešto drugo'),(13,'Releji i tranzistori','Sve što ima funkciju neke sklopke/prekidača ili elektroventila.'),(14,'Pumpe','Svakakve, zračne, vodene ili neke druge'),(15,'DC AC Step Motori','AC, DC, Servo, driveri i dr.'),(16,'Diode','LED, zener i dr.'),(17,'Prijamnici/predajnici','Bluetooth, RF, Wireless i dr'),(18,'Hladnjiaci','Različiti aluminijski, bakreni i drugi elementi za hlađenje'),(19,'Tiskane pločice','Jednoslojne, dvoslojne, foto i druge'),(20,'Čitači/Pisači','Razni moduli za čitanje i pisanje kao sd čitač, rfid pisač'),(21,'Potenciometri i joystici','Razni uređaji za kontrolu servo motora i ostalih komponenti'),(22,'Oscilatori','quartzni oscilatori'),(23,'Pojačala','Svakojaka pojačala');
+INSERT INTO `kategorije_komponenti` VALUES (1,'Nema kategoriju','Komponente za koje još nisam odlučio šta ću.'),(2,'Izvori/regulatori napajanja','Baterije, akumulatori, AC-DC step-up i step-down konverteri i svakojaka napajanja'),(3,'Kabeli','Svakojaki kablovi'),(4,'Konektori','Konektorti muški, ženski, za 220V ili 12V'),(5,'Mikrokontroleri','Arduino Uno, pro mini, nodemcu'),(6,'Otpornici','Svakakve verzije otpornika'),(7,'Kondenzatori','Bipolarni i svakakvi kondenzatori'),(8,'Senzori','ćelije za mjerenje, vlage, težine, voltaže i svega drugog'),(10,'Inox komponente','Inox djelovi za HERMS sustav'),(11,'Dom i vrt','Svašta nešto'),(12,'Ekrani','LCD ili Led paneli ili nešto drugo'),(13,'Releji i tranzistori','Sve što ima funkciju neke sklopke/prekidača ili elektroventila.'),(15,'DC AC Step Motori','AC, DC, Servo, driveri i dr.'),(16,'Diode','LED, zener i dr.'),(17,'Prijamnici/predajnici','Bluetooth, RF, Wireless i dr'),(18,'Hladnjiaci','Različiti aluminijski, bakreni i drugi elementi za hlađenje'),(19,'Tiskane pločice','Jednoslojne, dvoslojne, foto i druge'),(20,'Čitači/Pisači','Razni moduli za čitanje i pisanje kao sd čitač, rfid pisač'),(21,'Potenciometri i joystici','Razni uređaji za kontrolu servo motora i ostalih komponenti'),(22,'Oscilatori','quartzni oscilatori'),(23,'Pojačala','Svakojaka pojačala');
 /*!40000 ALTER TABLE `kategorije_komponenti` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,4 +180,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-26 23:37:37
+-- Dump completed on 2019-07-05 14:31:00
