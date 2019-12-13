@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.26, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.28, for Linux (x86_64)
 --
 -- Host: localhost    Database: baza_komponenti
 -- ------------------------------------------------------
--- Server version	5.7.26-0ubuntu0.18.04.1
+-- Server version	5.7.28-0ubuntu0.18.04.4
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -86,7 +86,7 @@ CREATE TABLE `komponente` (
   PRIMARY KEY (`id`),
   KEY `kateg_id_foreign` (`kateg_id`),
   CONSTRAINT `komponente_ibfk_1` FOREIGN KEY (`kateg_id`) REFERENCES `kategorije_komponenti` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=126 DEFAULT CHARSET=cp1250 COLLATE=cp1250_croatian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=cp1250 COLLATE=cp1250_croatian_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,7 +119,7 @@ CREATE TABLE `lokacije` (
 
 LOCK TABLES `lokacije` WRITE;
 /*!40000 ALTER TABLE `lokacije` DISABLE KEYS */;
-INSERT INTO `lokacije` VALUES (1,'Nema'),(2,'A1'),(3,'A2'),(4,'A3'),(5,'A4'),(6,'A5'),(7,'B1'),(8,'B2'),(9,'B3'),(10,'B4'),(11,'B5'),(12,'C1'),(13,'C2'),(14,'C3'),(15,'C4'),(16,'C5'),(17,'D1'),(18,'D2'),(19,'D3'),(20,'D4'),(21,'D5'),(22,'E1'),(23,'E2'),(24,'E3'),(25,'E4'),(26,'E5'),(27,'F1'),(28,'F2'),(29,'F3'),(30,'F4'),(31,'F5');
+INSERT INTO `lokacije` VALUES (1,'Nema'),(2,'A1'),(3,'A2'),(4,'A3'),(5,'A4'),(6,'A5'),(7,'B1'),(8,'B2'),(9,'B3'),(10,'B4'),(11,'B5'),(12,'C1'),(13,'C2'),(14,'C3'),(15,'C4'),(16,'C5'),(17,'D1'),(18,'D2'),(19,'D3'),(20,'D4'),(21,'D5'),(22,'E1'),(23,'E2'),(24,'E3'),(25,'E4'),(26,'E5'),(27,'F1'),(28,'F2'),(29,'F3'),(30,'F4'),(31,'F5'),(32,'G1'),(33,'G2'),(34,'G3'),(35,'G4'),(36,'G5'),(37,'G6'),(38,'G7'),(39,'G8'),(40,'H1'),(41,'H2'),(42,'H3'),(43,'H4'),(44,'H5'),(45,'H6'),(46,'H7'),(47,'H8'),(48,'I1'),(49,'I2'),(50,'I3'),(51,'I4'),(52,'I5'),(53,'I6'),(54,'I7'),(55,'I8'),(56,'J1'),(57,'J2'),(58,'J3'),(59,'J4'),(60,'J5'),(61,'J6'),(62,'J7'),(63,'J8');
 /*!40000 ALTER TABLE `lokacije` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -137,7 +137,7 @@ CREATE TABLE `users` (
   `password` varchar(400) COLLATE cp1250_croatian_ci NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=cp1250 COLLATE=cp1250_croatian_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=cp1250 COLLATE=cp1250_croatian_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -180,4 +180,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-07-05 14:31:00
+-- Dump completed on 2019-12-13 13:37:25
